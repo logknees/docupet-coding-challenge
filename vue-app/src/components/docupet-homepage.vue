@@ -1,6 +1,6 @@
 <template>
-  <div>
-      I AM THE HOMEPAGE
+  <div class="page">
+      
     <docupet-form></docupet-form>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss" scoped>
+
 
 </style>
