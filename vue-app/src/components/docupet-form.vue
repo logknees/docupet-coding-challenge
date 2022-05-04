@@ -109,7 +109,7 @@ export default {
     },
     methods: {
         submit(){
-            this.$http.post("localhost", this.form)
+            this.$http.post('/', this.form)
         }
     }
 }

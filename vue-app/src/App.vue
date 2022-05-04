@@ -19,7 +19,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios'
 
 
-Vue.prototype.$http = axios
+let instance = axios.create({
+  baseURL: 'https://localhost'
+});
+Vue.prototype.$http = instance
 
 library.add(faPaw, faSearch)
 
