@@ -10,6 +10,8 @@ Then, in the root directory of the project, type into your terminal the command 
 
 You can also use the commands `make client-build` and `make server-build` in order to manually build the images.
 
+Once your containers are up and running, run the `make server-setup` command to build an application key, install composer packages and create a cache file for laravel.
+
 Finally, use `make serve` in a new terminal tab to start entering your pet's information!
 
 Use `make down` to turn off the containers.
