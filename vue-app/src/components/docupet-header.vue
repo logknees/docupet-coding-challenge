@@ -5,7 +5,7 @@
         </div>
         <div class="nav">
             <span @click="help">Help</span>
-            <span><a @click="submit">Save and Finish Later</a></span>
+            <span><a @click="patch">Save and Finish Later</a></span>
         </div>
     </div>
 </template>
@@ -21,8 +21,8 @@ export default {
                 type: 'is-warning',
             })
         },
-        submit(){
-            console.log('hi')
+        patch(){
+            this.$emit('patch')
         }
 
     }
