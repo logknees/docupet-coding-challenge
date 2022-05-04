@@ -15,10 +15,13 @@ import Buefy from 'buefy'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faPaw } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
 
 
+Vue.prototype.$http = axios
 
-library.add(faPaw)
+library.add(faPaw, faSearch)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
