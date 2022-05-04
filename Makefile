@@ -7,6 +7,9 @@ client-build:
 server:
 	cd laravel-app && docker-compose up
 
+server-setup:
+	docker exec app composer install && docker exec app php artisan key:generate && docker exec app php artisan config:cache
+
 client: 
 	cd vue-app && docker-compose up
 
