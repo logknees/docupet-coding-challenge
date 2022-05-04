@@ -109,7 +109,22 @@ export default {
     },
     methods: {
         submit(){
-            this.$http.post('/', this.form)
+            let data = new URLSearchParams(this.form)
+            let config = { headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
+            this.$http.post('/', data, config)
+                .then((response) => {
+                    console.log(response)
+                    this.$buefy.toast.open({
+                        message: `Request succeeded with ${response.status} status code!`,
+                        type: 'is-success',
+                    })
+                })
+                .catch((error) => {
+                    this.$buefy.toast.open({
+                        message: `Request Failed with ${error} error code.`,
+                        type: 'is-danger',
+                    })
+                })
         }
     }
 }
