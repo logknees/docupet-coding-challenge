@@ -191,6 +191,16 @@ export default {
         & :nth-child(even) {
             margin-top: 1.5rem;
         }
-  }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .form-con{
+            width: 80%;
+        }
+
+        .pawprints{
+            display: none;
+        }
+    }
 
 </style>
