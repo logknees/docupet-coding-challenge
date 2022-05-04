@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <docupet-header></docupet-header>
+        <docupet-header @patch="patch"></docupet-header>
         <docupet-homepage></docupet-homepage>
     </div>
 </template>
@@ -20,7 +20,7 @@ import axios from 'axios'
 
 
 let instance = axios.create({
-  baseURL: 'https://localhost'
+  baseURL: 'http://localhost:80'
 });
 Vue.prototype.$http = instance
 
@@ -45,6 +45,14 @@ export default {
     name: 'App',
     components: {
 
+    },
+    methods: {
+        patch(){
+            this.$buefy.toast.open({
+                message: `Pet profile saved for later!`,
+                type: 'is-success',
+            })
+        }
     }
 }
 </script>
@@ -64,7 +72,7 @@ export default {
             "main" 1fr
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 900px) {
         .app{
             display: block;
         }
