@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
+use App\Http\Controllers\ControllerPet;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Hello World';
-});
+Route::post('/', 'App\Http\Controllers\ControllerPet@create')->middleware('cors');
 
-Route::post('/', function () {
-    return 'oijwfoiqjfoijqwfoiqjwf';
-});
+//not used
+// Route::patch('/', 'App\Http\Controllers\ControllerPet@update')->middleware('cors');
+// Route::put('/', 'App\Http\Controllers\ControllerPet@upsert')->middleware('cors');
+
