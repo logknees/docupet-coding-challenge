@@ -1,6 +1,5 @@
 <template>
-  <div class="header">
-        <div></div>
+    <div class="header">
         <div class="logo">
             <img src="docupet-logo.png"/>
         </div>
@@ -8,7 +7,7 @@
             <span @click="help">Help</span>
             <span><a @click="submit">Save and Finish Later</a></span>
         </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -45,8 +44,7 @@ export default {
         margin-right: auto;
 
         & img{
-            height: 100%;
-            width: 100%;
+            height: 3rem;
         }
     }
 
@@ -74,9 +72,17 @@ export default {
             position: relative;
             display: grid;
             grid-auto-rows: auto;
+            justify-content: center;
             gap: 1rem;
             width: 100%;
             right: 0;
+
+            & span{
+                border: 1px solid #565656a6;
+                border-radius: 3px;
+                padding: 5px;
+                width: 15em;
+            }
         }
 
     }
